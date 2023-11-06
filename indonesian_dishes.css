@@ -20,13 +20,14 @@ h2 {
 .desc,
 .title {
     text-align: center;
+    padding: 0.2rem;
 }
 
 * {
     box-sizing: border-box;
 }
 
-section {
+#dishes_collection {
     margin-top: 1rem;
     margin-bottom: 1rem;
     display: flex;
@@ -40,36 +41,33 @@ section {
     width: 30%;
 }
 
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 50%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .responsive {
-        width: 100%;
-    }
+h2 {
+    text-decoration: underline;
 }
 
 figure {
     text-align: center;
+    padding: 1rem;
 }
 
 figure img {
     width: 50%;
 }
 
-blockquote {
-    background: #f9f9f9;
-    border-left: 10px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    quotes: "\201C" "\201D" "\2018" "\2019";
+#dish_article {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    line-height: 1.5rem;
 }
 
-blockquote:before {
+#image-label {
+    margin: 0.5em;
+    padding: 0.5em;
+    font-weight: bold;
+}
+
+#image-label:before {
     color: #ccc;
     content: open-quote;
     font-size: 4em;
@@ -78,13 +76,65 @@ blockquote:before {
     vertical-align: -0.4em;
 }
 
-blockquote p {
-    display: inline;
+#image-label::after {
+    color: #ccc;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.4em;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    column-gap: 1rem;
+}
+
+#ingredients {
+    border-right: 1px solid black;
+}
+
+h3 {
+    margin: 2rem 0 1rem 0;
+}
+
+li {
+    margin-left: 2rem;
 }
 
 @media only screen and (max-width: 900px) {
     figure img {
         width: 75%;
+    }
+
+    article {
+        grid-template-columns: 40% 60%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 50%;
+        margin: 6px 0;
+    }
+
+    article {
+        grid-template-columns: 30% 70%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+
+    article {
+        display: block;
+    }
+
+    #ingredients {
+        border-right: none;
     }
 }
 
