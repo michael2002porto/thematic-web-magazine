@@ -89,6 +89,7 @@ article {
     display: grid;
     grid-template-columns: 50% 50%;
     column-gap: 1rem;
+    margin-top: 2rem;
 }
 
 #ingredients {
@@ -96,7 +97,7 @@ article {
 }
 
 h3 {
-    margin: 2rem 0 1rem 0;
+    margin: 0 0 0.5rem 0;
 }
 
 li {
